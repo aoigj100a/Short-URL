@@ -1,0 +1,128 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+header>a>h1 {
+    font: normal normal bold 48px arial;
+    color: transparent;
+    background: rgb(12, 132, 136);
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5);
+}
+
+.pt {
+    padding-top: 25px;
+}
+
+.fa-link {
+    color: transparent;
+    background: #00C1FF;
+    background: -moz-linear-gradient(-45deg, #00C1FF 0%, #00ADA9 33%, #008566 100%);
+    background: -webkit-linear-gradient(-45deg, #00C1FF 0%, #00ADA9 33%, #008566 100%);
+    background: linear-gradient(135deg, #00C1FF 0%, #00ADA9 33%, #008566 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    /* text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5); */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0 0 0;
+    margin: auto;
+    width: 80%;
+}
+
+.input-control {
+    padding-bottom: 50px;
+}
+
+.input-control input {
+    height: 50px;
+    width: 600px;
+    font-size: 36px;
+    border:1px solid #008566 ;
+    border-radius: 8px;
+}
+
+.input-control input:hover, .input-control input:active {
+    border-radius: 8px;
+}
+
+.input-control>span {
+    display: block;
+    font-size: 18px;
+    color: #979797;
+}
+
+.my-btn {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 12px 24px;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    background: #44db9f;
+    box-shadow: #a1a1a1 0px 2px 5px 1px;
+    font: normal normal bold 20px arial;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.my-btn:hover, .my-btn:focus {
+    background: #52ffbf;
+    color: #ffffff;
+    text-decoration: none;
+    box-shadow: #ffffff 0px 0px 0px 0px;
+    cursor: pointer;
+}
+
+.my-btn:active {
+    background: #29835f;
+}
