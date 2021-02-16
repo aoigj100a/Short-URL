@@ -1,10 +1,11 @@
 const mongoose = require('mongoose')
+
 const urlSchema = new mongoose.Schema({
-    original: {
+    originalUrl: {
         type: String,
         require: true
     },
-    tiny: {
+    fit: {
         type: String,
         require: true
     }
