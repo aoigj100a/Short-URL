@@ -1,5 +1,3 @@
-const url = require("../../models/url")
-
 $(document).ready(function () {
 
     //用alert方法把沒輸入內容的操作擋下來
