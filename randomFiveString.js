@@ -6,7 +6,6 @@ function randomFiveString() {
         const index = Math.floor(Math.random() * dataBox.length)
         result += dataBox[index]
     }
-    console.log(result)
 
     return result
 }
