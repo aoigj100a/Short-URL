@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 })
 app.post('/',(req, res)=>{
     console.log(req.body)
-    res.send('收表單囉')
+    res.render('result')
 })
 
 app.listen(port, () => {

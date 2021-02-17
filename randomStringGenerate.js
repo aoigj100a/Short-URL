@@ -11,4 +11,4 @@ function randomFiveString() {
     return result
 }
 
-randomFiveString()
+module.exports = randomFiveString
