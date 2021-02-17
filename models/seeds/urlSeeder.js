@@ -1,10 +1,7 @@
-const mongoose = require('mongoose')
 const urllist = require('./urls.json').urls
 const Url = require('../url')
-mongoose.set('useCreateIndex', true)
-mongoose.connect('mongodb://localhost/URL', { useNewUrlParser: true, useUnifiedTopology: true })
 
-const db = mongoose.connection
+const db = require('../../config/db')
 db.once('open', () => {
     console.log('mongodb connected !!')
     Url.create(urllist)

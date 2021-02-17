@@ -1,6 +1,7 @@
 const express = require('express')
 const exphbs = require('express-handlebars')
-const mongoose = require('mongoose')
+require('./config/db')
+
 const bodyParser = require('body-parser')
 
 const app = express()
@@ -12,15 +13,7 @@ app.set('view engine', 'hbs')
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({ extended: true }))
 
-mongoose.set('useCreateIndex', true)
-mongoose.connect('mongodb://localhost/URL', { useNewUrlParser: true, useUnifiedTopology: true })
-const db = mongoose.connection
-db.on('error', () => {
-    console.log('mongoDB error!')
-})
-db.once('open', () => {
-    console.log('mongoDB connected!')
-})
+
 
 app.get('/', (req, res) => {
     res.render('index')
