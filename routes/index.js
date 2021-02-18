@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const randomFiveString = require('../randomFiveString')
 const Url = require('../models/url')
-const port = 3000
+const port = process.env.PORT || 3000
 
 router.get('/', (req, res) => {
     res.render('index')
@@ -16,8 +16,12 @@ router.post('/', (req, res) => {
     const originalUrl = req.body.url
     Url.find().lean()
         .then((urls) => {
-            //待部署後更新
-            let host = `http://localhost:${port}/`
+            let host = ''
+            if (process.env.MONGODB_URI) {
+                HOST = 'https://secure-retreat-76468.herokuapp.com/'
+            } else {
+                HOST = 'http://localhost:3000/'
+            }
             //確認資料庫內是否有此筆資料
             shortenedUrl = urls.find((url) => url.originalUrl === originalUrl)
             if (shortenedUrl) {
