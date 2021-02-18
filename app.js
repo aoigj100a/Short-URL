@@ -4,7 +4,7 @@ require('./config/db')
 const bodyParser = require('body-parser')
 const routes = require('./routes')
 const app = express()
-const port = 3000
+const port = process.env.PORT || 3000
 
 app.engine('hbs', exphbs({ defaultLayout: 'main', extname: '.hbs' }))
 app.set('view engine', 'hbs')

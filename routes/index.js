@@ -18,9 +18,9 @@ router.post('/', (req, res) => {
         .then((urls) => {
             let host = ''
             if (process.env.MONGODB_URI) {
-                HOST = 'https://secure-retreat-76468.herokuapp.com/'
+                host = 'https://secure-retreat-76468.herokuapp.com/'
             } else {
-                HOST = 'http://localhost:3000/'
+                host = 'http://localhost:3000/'
             }
             //確認資料庫內是否有此筆資料
             shortenedUrl = urls.find((url) => url.originalUrl === originalUrl)
