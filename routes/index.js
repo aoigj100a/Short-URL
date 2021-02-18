@@ -2,7 +2,6 @@ const express = require('express')
 const router = express.Router()
 const randomFiveString = require('../randomFiveString')
 const Url = require('../models/url')
-const port = process.env.PORT || 3000
 
 router.get('/', (req, res) => {
     res.render('index')
@@ -47,9 +46,9 @@ router.post('/', (req, res) => {
             }).then(() => {
                 //去view把傳過去的資料印出
                 res.render('result', { shortenedUrl })
-            })
-                .catch(error => console.log(error))
-        })
+            }).catch(error => console.log(error))
+                
+        }).catch(error => console.log(error))
 
     router.get('/:fit', (req, res) => {
         const fit = req.params.fit
