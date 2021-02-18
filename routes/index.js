@@ -17,7 +17,7 @@ router.post('/', (req, res) => {
         .then((urls) => {
             let host = ''
             if (process.env.MONGODB_URI) {
-                host = 'https://secure-retreat-76468.herokuapp.com/'
+                host = 'https://protected-earth-94409.herokuapp.com/'
             } else {
                 host = 'http://localhost:3000/'
             }
